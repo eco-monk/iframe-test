@@ -7,7 +7,7 @@
    const frameEle = document.getElementById("frameEle");
    function sendMessage() {
        console.log("send triggered")
-       frameEle.postMessage(message, 'Parent message');
+       frameEle.postMessage("Paren message", '*);
    }
    
    window.addEventListener('message', function (e) {
