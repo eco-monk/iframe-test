@@ -1,4 +1,16 @@
 <html>
 Hello world
   <iframe src="https://eco-monk.github.io/sample-2/" style="height:200px;width:300px;"></iframe>
+  
+ <script>
+        
+   window.parent.postMessage(message, 'Parent message');
+   
+   window.addEventListener('message', function (e) {
+      // Get the sent data
+      const data = e.data;
+      console.log("from iframe", data);
+  });
+        
+  </script>
 </html>
