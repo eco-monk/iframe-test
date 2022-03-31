@@ -1,10 +1,11 @@
 <html>
 Hello world
-  <iframe src="https://eco-monk.github.io/sample-2/" style="height:200px;width:300px;"></iframe>
+  <iframe id="frameEle" src="https://eco-monk.github.io/sample-2/" style="height:200px;width:300px;"></iframe>
   
  <script>
-        
-   window.parent.postMessage(message, 'Parent message');
+       
+   const frameEle = document.getElementById("frameEle");
+   frameEle.postMessage(message, 'Parent message');
    
    window.addEventListener('message', function (e) {
       // Get the sent data
